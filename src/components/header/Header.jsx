@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Image, Button } from "react-bootstrap";
 import MedicAlertLogo from "../../assets/images/Maf-log.png";
-import UserSvg from "../../assets/svg/user.svg";
+import { Link } from "react-router-dom";
 import MedicalIdDropdown from "./medical_ids/MedicalIdDropdown";
 import Protection247Dropdown from "./247_protection/Protection247Dropdown";
 import MemberStoriesDropdown from "./member_stories/MemberStoriesDropdown";
@@ -55,7 +55,7 @@ const Header = () => {
                 }`}>
                 <Container fluid>
                     {/* ------ LOGO -----  */}
-                    <Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/'>
                         <Image
                             className="navbar--logo"
                             src={MedicAlertLogo}
@@ -85,7 +85,7 @@ const Header = () => {
                                 className=" mx-auto d-flex align-items-center gap-lg-3 gap-xl-4 gap-xxl-5 font--small fw-bold"
                                 onMouseOver={handleMouseOver}
                                 onMouseLeave={handleMouseLeave}>
-                                <Nav.Link>How it Work's</Nav.Link>
+                                <Nav.Link as={Link} to='/hiw'>How it Work's</Nav.Link>
                                 <MedicalIdDropdown />
                                 <Protection247Dropdown />
                                 <MemberStoriesDropdown />

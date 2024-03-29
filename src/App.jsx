@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, RouterProvider } from 'react-router-dom'
 import keycloakConfig from './authentication/keycloak'
 import Keycloak from 'keycloak-js'
 import { ReactKeycloakProvider } from '@react-keycloak/web'
@@ -11,7 +10,7 @@ const App = () => {
   return (
     <ReactKeycloakProvider authClient={kc} initOptions={{ onLoad: 'login-required' }}>
       <div className='bg--main rounded-bottom-5 '>
-        <RouterProvider router={AppRouter} />
+        <AppRouter/> 
       </div>
     </ReactKeycloakProvider>
   )
