@@ -1,0 +1,150 @@
+:root {
+    --secondary--color: #0a4277;
+    --hover--color: rgba(179, 248, 225, 0.336);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 375px;
+    height: 5000px;
+}
+.overlay--dark {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0 0 0 / 0.5);
+}
+
+/* BACKGROUND STYLING  */
+.bg--main {
+    background: rgb(248, 248, 248);
+    background: linear-gradient(
+        70deg,
+        rgb(248, 248, 248) 0%,
+        rgba(199, 238, 255, 1) 27%,
+        rgba(171, 228, 255, 1) 46%,
+        rgba(248, 248, 248, 1) 78%
+    );
+    padding-top: 3rem;
+    /* border: 2px solid black; */
+}
+
+/* CUSTOM STYLINGS */
+.font--small {
+    font-size: 0.8rem;
+}
+.h--font {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+.secondary--color {
+    color: var(--secondary--color);
+}
+.bg--secondary {
+    background-color: var(--secondary--color);
+}
+.right--text {
+    width: 60%;
+}
+.hover--body > p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.z-index-1 {
+    z-index: 1;
+}
+.side--bar {
+    max-width: 80vw;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.sidebar--header {
+    letter-spacing: 0.1rem;
+}
+.font--medium {
+    font-size: 1.1rem;
+}
+.bg--green {
+    background-color: var(--hover--color);
+}
+.hover--div:hover .hover--link {
+    background-color: var(--hover--color);
+}
+.user--img{
+    cursor: pointer;
+}
+.user--body > p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+/* ---------------------- HEADER STYLING ------------------- */
+
+/* NAVBAR STYLING  */
+@media (min-width: 992px) {
+    #myNavbar {
+        transition: background-color 0.1s ease-in-out;
+    }
+    #myNavbar:hover {
+        background-color: #fff;
+    }
+    .ad--img {
+        max-width: 60%;
+    }
+}
+@media (min-width: 1281px) {
+    .ad--img {
+        max-width: 50%;
+    }
+}
+/* MEDICAL ID MEGAMENU STYLINGS  */
+.med--menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+    background-color: white;
+}
+.med--id:hover .med--menu {
+    display: block;
+    max-height: 100%;
+}
+.med--card:hover {
+    background-color: var(--hover--color);
+    cursor: pointer;
+}
+.med--id:hover .med--link {
+    background-color: var(--hover--color);
+}
+.med--id:not(:hover) .med--menu {
+    transition: max-height 0s ease-out;
+}
+
+/* ---------------------- MAIN STYLING ------------------- */
+
+@media (max-width: 575.98px) {
+    .h--font {
+        font-size: 3rem;
+    }
+    .navbar--logo {
+        width: 160px;
+    }
+}
+@media (max-width: 991px) {
+    .right--text {
+        width: 100% !important;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* SCROLLBAR STYLING  */
+::-webkit-scrollbar{
+  width: 0;
+}
