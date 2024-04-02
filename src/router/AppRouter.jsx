@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout";
 import Home from "../pages/Home";
 import HowItWorks from "../pages/HowItWorks";
 import PrivateRoute from "./PrivateRoute";
+import Forbidden from "../pages/Forbidden";
 
 const AppRouter = () => {
     return (
@@ -15,6 +16,8 @@ const AppRouter = () => {
                         <Route path="hiw" element={<HowItWorks />} />
                     </Route>
                 </Route>
+
+                <Route path="/forbidden" element={<Forbidden />} />
             </Routes>
         </Router>
     );

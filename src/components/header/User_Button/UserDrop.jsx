@@ -11,13 +11,13 @@ const UserDrop = ({ setShowOverlay }) => {
     const handleMouseEnter = () => {
         setOpen(true);
         setTransitionDuration(300);
-        setShowOverlay(true);
+        setShowOverlay && setShowOverlay(true);
     };
 
     const handleMouseLeave = () => {
         setOpen(false);
         setTransitionDuration(0);
-        setShowOverlay(false);
+        setShowOverlay && setShowOverlay(false);
     };
 
     const signOut = () => {

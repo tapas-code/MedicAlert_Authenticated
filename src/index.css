@@ -11,7 +11,7 @@
 
 body {
     min-width: 375px;
-    height: 5000px;
+    /* height: 5000px; */
 }
 .overlay--dark {
     position: fixed;
